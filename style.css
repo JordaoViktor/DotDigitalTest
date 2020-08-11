@@ -6,12 +6,16 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 :root{
     --primmary-color:#6f6f6f;
     --secondary-color:#bebebe;
+    --border-gray-color:#343434;
     --strong-green-color:#2d3b09;
     --weak-green-color:#546130;
+    --white-color:#ffff;
 }
+
 .background-image{
     width: 100vw;
     height: 100vh;
@@ -29,20 +33,22 @@
     align-items: center;
     justify-content: start;
 }
+
 .container h1{
     font-weight: bold;
     font-size: 40pt;
     text-transform: uppercase;
     color:var(--weak-green-color);
     margin-top: 10px;
-    
 }
+
 .container p{
     font-weight: bold;
     font-size: 20pt;
     color:var(--strong-green-color);
     margin-bottom: 20px;
 }
+
 .container svg{
     width: 55px;
     height: 80px;
