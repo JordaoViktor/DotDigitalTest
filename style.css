@@ -6,12 +6,44 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+:root{
+    --primmary-color:#6f6f6f;
+    --secondary-color:#bebebe;
+    --strong-green-color:#2d3b09;
+    --weak-green-color:#546130;
+}
 .background-image{
     width: 100vw;
     height: 100vh;
-    background-image: url('./assets/background.png');
+    background-image: url('./assets/background.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+.container h1{
+    font-weight: bold;
+    font-size: 40pt;
+    text-transform: uppercase;
+    color:var(--weak-green-color);
+    margin-top: 10px;
+    
+}
+.container p{
+    font-weight: bold;
+    font-size: 20pt;
+    color:var(--strong-green-color);
+    margin-bottom: 20px;
+}
+.container svg{
+    width: 55px;
+    height: 80px;
 }
