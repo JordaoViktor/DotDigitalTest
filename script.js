@@ -29,6 +29,17 @@ nextButton.addEventListener('click', event => {
     const currentSlide = track.querySelector('.current-slide');
     const nextSlide = currentSlide.nextElementSibling;
 
-    moveToSlide(track, currentSlide, nextSlide)
+    moveToSlide(track, currentSlide, nextSlide);
 });
-// console.log(slideWidth)
+
+dotsNav.addEventListener('click', event =>{
+    const targetDot = event.target.closest('button');
+    if(!targetDot) return ;
+
+    const currentSlide = track.querySelector('.current-slide');
+    const currentDot = dotsNav.querySelector('.current-slide');
+    const targetIndex = dots.findIndex(dot => dot === targetDot)
+    const targetSlide = slides[targetIndex];
+    
+    moveToSlide(track, currentSlide, targetSlide)
+})
