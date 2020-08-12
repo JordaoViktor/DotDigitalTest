@@ -13,4 +13,22 @@ const setSlidePosition = (slide, index)=> {
 
 slides.forEach(setSlidePosition);
 
+const moveToSlide = (track, currentSlide, targetSlide) => {
+    track.style.transform = `translateX(-${targetSlide.style.left})`;
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+}
+
+prevButton.addEventListener('click', event => {
+    const currentSlide = track.querySelector('.current-slide');
+    const prevSlide = currentSlide.previousElementSibling;
+
+    moveToSlide(track, currentSlide, prevSlide)
+})
+nextButton.addEventListener('click', event => {
+    const currentSlide = track.querySelector('.current-slide');
+    const nextSlide = currentSlide.nextElementSibling;
+
+    moveToSlide(track, currentSlide, nextSlide)
+});
 // console.log(slideWidth)

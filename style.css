@@ -38,18 +38,24 @@ ul,li{
     bottom: 0;
 }
 .carousel-track-container{
-    background-color: blue;
-    height:100vh;
-    width: 100vw;
+    height:100%;
+    width: 100%;
     position:relative;
+    overflow: hidden;
 }
 .carousel-track{
     position: relative;
+    height: 100vh;
+    width: 100vw;
+    transition:transform 250ms ease-in;
 }
 .carousel-slide{
     position: absolute;
     top: 0;
     bottom: 0;
+    width: 100%;
+    height: 100%;
+    
 }
 .carousel-button{
     position: absolute;
