@@ -86,11 +86,8 @@ ul,li{
     display: flex;
     justify-content: center;
     width: 100vw;
-    /* height: 100vh; */
     padding: 10px 0;
     margin: -70px 0;
-    /* opacity: 0.2; */
-    
 }
 .carousel-indicator{
     margin: 0 10px;
