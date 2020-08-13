@@ -8,6 +8,9 @@
     font-size: 400;
     
 }
+html{
+    scroll-behavior: smooth;
+}
 ul,li{
     list-style: none;
 }
@@ -372,7 +375,7 @@ body{
 
 .email-page{
     width:100vw;
-    height: 700px;
+    height: 500px;
     background-color: var(--primmary-color);
     background-image: url('./assets/email-background.jpg');
     background-size: 100% 600px;
@@ -387,6 +390,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .email-name{
     width: 80%;
@@ -396,7 +400,7 @@ body{
     border-radius: 10px;
     margin:20px 0;
 }
-.email-name span{
+.email-span{
     color:var(--black-color);
     font-weight: bold;
     padding-left: 20px;
@@ -410,15 +414,82 @@ body{
     outline: none;
     color:var(--background-gray-color)
 }
-.email-contact{
-    
-}
-
 .email-container-flex{
     display: flex;
     justify-content: space-between;
     width: 80%;
+    margin-bottom: 20px;
 }
+.email-contact{
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding:20px 0;
+    border-radius: 10px;
+    width:48%
+}
+.email-contact input{
+    background: transparent;
+    cursor:text;
+    width: 80%;
+    margin-left: 10px;
+    font-size: 12pt;
+    outline: none;
+    color:var(--background-gray-color)
+}
+.email-phone{
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding:20px 0;
+    border-radius: 10px;
+    width:48%
+}
+.email-phone input{
+    background: transparent;
+    cursor:text;
+    width: 70%;
+    margin-left: 10px;
+    font-size: 12pt;
+    outline: none;
+    color:var(--background-gray-color)
+}
+.text-area-mensage{
+    width: 80%;
+    background-color:var(--secondary-color);
+    border-radius: 10px;
+    display: flex;
+}
+.text-area-mensage span{
+    
+    text-align: start;
+}
+.text-area-mensage  textarea{
+    width: 90%;
+    height: 80%;
+    padding-top: 20px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 12pt;
+    color:var(--background-gray-color)
+}
+.text-area-mensage span{
+    color:var(--black-color);
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+.submit-button{
+    padding: 20px 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:var(--black-color);
+    background-color: var(--white-color);
+    border:none;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
 .footer{
     width: 100vw;
     height: 100px;
