@@ -1,0 +1,33 @@
+{
+  "name": "js-dot-test",
+  "version": "1.0.0",
+  "description": "Dot Digital Group test",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordaoViktor/DotDigitalTest.git"
+  },
+  "author": "Jordão Victor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordaoViktor/DotDigitalTest/issues"
+  },
+  "homepage": "https://github.com/JordaoViktor/DotDigitalTest#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-image": "^6.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "dependencies": {
+    "gulp-cssimport": "^7.0.0",
+    "gulp-htmlmin": "^5.0.1"
+  }
+}

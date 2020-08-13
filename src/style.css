@@ -487,7 +487,11 @@ body{
     border:none;
     margin-top: 20px;
     border-radius: 10px;
-
+    cursor:pointer;
+}
+.submit-button:hover{
+   background-color: var(--secondary-color);
+   transition: ease-in .2s;
 }
 
 .footer{

@@ -63,7 +63,7 @@ dotsNav.addEventListener('click', event =>{
     const targetDot = event.target.closest('button');
     const currentSlide = track.querySelector('.current-slide');
     const currentDot = dotsNav.querySelector('.current-slide');
-    const targetIndex = dots.findIndex(dot => dot === targetDot)
+    const targetIndex = dots.findIndex(dot => dot === targetDot);
     const targetSlide = slides[targetIndex];
     
     moveToSlide(track, currentSlide, targetSlide);
