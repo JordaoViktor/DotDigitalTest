@@ -18,7 +18,7 @@ javaScript = () =>{
 }
 
 css = ()=> {
-    return src('src/*.css')
+    return src('src/style/*.css')
         .pipe(cssimport())
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(rename({extname:'.min.css'}))
