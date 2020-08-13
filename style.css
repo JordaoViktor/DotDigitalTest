@@ -11,7 +11,9 @@
 ul,li{
     list-style: none;
 }
-
+body{
+    overflow-x: hidden;
+}
 :root{
     --primmary-color:#6f6f6f;
     --secondary-color:#bebebe;
@@ -351,6 +353,9 @@ ul,li{
     background-color: var(--white-color);
     color:var(--primmary-color);
 }
+.accordion-input:checked ~ .accordion-label:first-child:hover{
+   
+}
 .border{
     border-radius: 20px;
 }
@@ -361,4 +366,24 @@ ul,li{
 .border-bottom{
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px ;
+}
+
+.email-page{
+    width:100vw;
+    height: 700px;
+    background-color: var(--primmary-color);
+}
+.email-ground{
+    width:100%;
+    height: 100%;
+    background-color: var(--primmary-color);
+}
+.geometry{
+    width: 0;
+    height: 0;
+    border-bottom: 700px solid var(--background-gray-color);
+    border-left: 1300px solid transparent;
+    top: 0;
+    bottom: 0;
+    margin-left: auto;
 }
