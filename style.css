@@ -296,5 +296,12 @@ ul,li{
 .accordion-content{
     background-color: var(--white-color);
     line-height: 1.6;
-    /* display: none; */
+    display: none;
+}
+
+.accordion-input{
+    display: none;
+}
+.accordion-input:checked ~ .accordion-content{
+    display: block;
 }
