@@ -305,3 +305,21 @@ ul,li{
 .accordion-input:checked ~ .accordion-content{
     display: block;
 }
+.accordion-input:checked ~ .accordion-label::after{
+     content:'';
+     position:absolute;
+     top:50%;
+     transform:translateY(-50%);
+     right:20px;
+     width: 50px;
+     height: 25px;
+     background-image: url('./assets/arrow-top.svg');
+     background-size: auto;
+     background-repeat: no-repeat;
+     color:var(--white-color);
+     transition: transform 0.4s;
+}
+.accordion-input:checked ~ .accordion-label{
+    background-color: var(--white-color);
+    color:var(--primmary-color)
+}
