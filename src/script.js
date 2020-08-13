@@ -37,8 +37,10 @@ const upDateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
     targetDot.classList.add('current-slide');
 }
+console.log(prevButton)
 
-prevButton.addEventListener('click', event => {
+prevButton.addEventListener('click', event =>{
+    console.log(event.target)
     const currentSlide = trackGrid.querySelector('.current-slide-grid');
     const prevSlide = currentSlide.previousElementSibling 
     moveToSlideGrid(trackGrid, currentSlide, prevSlide)

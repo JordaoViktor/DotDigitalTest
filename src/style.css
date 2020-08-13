@@ -85,7 +85,12 @@ body{
     cursor: pointer;
     outline: none;
 }
-
+.carousel-track-grid{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition:transform 500ms ease-in;
+}
 .carousel-button-right{
     right: 50px;
     height: 40px;
