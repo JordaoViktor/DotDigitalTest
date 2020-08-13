@@ -1,0 +1,99 @@
+.carousel-background{
+    background-color: var(--background-gray-color);
+    width: 100vw;
+    height: 500px;
+    position: relative;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr;
+    grid-template-rows: 1fr;
+    grid-gap:45px;
+    grid-template-areas: "left-side middle right-side";
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.carousel-track-grid{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition:transform 500ms ease-in;
+}
+.carousel-button{
+    position: absolute;
+    top:50%;
+    height:50px;
+    width: 50px;
+    z-index: 2;
+    background: transparent;
+    border:none;
+    transform: translateY(-50%);
+    cursor: pointer;
+    outline: none;
+}
+
+.carousel-button-right{
+    right: 50px;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    z-index: 2;
+    fill:var(--white-color)
+}
+.carousel-button-left{
+    left: 50px;
+    height:40px;
+    width: 40px;
+    position: absolute;
+    z-index: 2;
+    fill:var(--white-color)
+}
+.left-side{
+    grid-area: left-side;
+}
+.middle{
+    grid-area: middle; 
+}
+.right-side{
+    grid-area: right-side; 
+}
+.card{
+    height: 100%;
+    color:var(--white-color);
+    margin-top: 50px;
+}
+.card-left-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.card-middle-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card img{
+    width:300px;
+    height: 200px;
+    border: 8px solid var(--primmary-color);
+}
+.card h3{
+    text-transform: uppercase;
+    text-align: center;
+    width: 300px;
+    font-weight: bold;
+    font-size: 18pt;
+    padding:10px 0;
+}
+.card article{
+    width: 300px;
+    text-align: center;
+}

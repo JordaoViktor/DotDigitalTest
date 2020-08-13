@@ -1,0 +1,96 @@
+.carousel{
+    position: relative;
+    height:100vh;
+    width: 100vw;
+}
+.carousel-image{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+}
+.carousel-track-container{
+    height:100%;
+    width: 100%;
+    position:relative;
+    overflow: hidden;
+}
+.carousel-track{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition:transform 500ms ease-in;
+}
+.carousel-slide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.carousel-slide-grid{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-nav{
+    position: absolute;
+    background-color: rgba(52,52,52,0.7);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    margin: -70px 0;
+}
+.carousel-indicator{
+    margin: 0 10px;
+    border: solid 8px var(--border-gray-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background:var(--white-color);
+    cursor:pointer;
+    outline: none;
+}
+.carousel-indicator.current-slide{
+    border: solid 8px var(--white-color);
+    background-color: var(--weak-green-color);
+}
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow-x: hidden;
+}
+
+.container h1{
+    font-weight: bold;
+    font-size: 40pt;
+    text-transform: uppercase;
+    color:var(--weak-green-color);
+    margin-top: 10px;
+}
+
+.container p{
+    font-weight: bold;
+    font-size: 20pt;
+    color:var(--strong-green-color);
+    margin-bottom: 20px;
+    overflow-x: hidden;
+}
+
+.container svg{
+    width: 55px;
+    height: 80px;
+}
