@@ -10,3 +10,13 @@ Estou utilizando para esse projeto
     <li>HTML 5</li>
     <li>Gulp</li>
 </ul>
+
+### Para fazer o build do projeto utilizar o comando
+
+**npm run build**
+
+### Caso queira acessar o projeto utilizar o live-server
+
+## Imagem do projeto
+
+<img src="./src/assets/full-project.png">
