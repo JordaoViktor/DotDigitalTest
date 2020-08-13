@@ -5,7 +5,7 @@
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: regular;
+    font-size: 400;
     
 }
 ul,li{
@@ -152,7 +152,7 @@ ul,li{
 .carousel-background{
     background-color: var(--background-gray-color);
     width: 100vw;
-    height: 60vh;
+    height: 500px;
     position: relative;
 }
 .grid-container{
@@ -217,7 +217,7 @@ ul,li{
 .profile{
     background-color: var(--primmary-color);
     width: 100vw;
-    height: 65vh;
+    height: 500px;
     color:var(--white-color)
 }
 .profile-container{
@@ -225,16 +225,31 @@ ul,li{
     align-items: center;
     width: 100%;
     height: 100%;
+    justify-content: space-around;
 }
-.profile-content h2{
+.profile-content{
+    max-width: 680px;
+    max-height: 500px;
+}
+.profile-content .title{
     text-transform: uppercase;
     font-weight: bold;
 }
+.profile-content article {
+    margin:30px 0;
+}
+.bold-article{
+    font-weight: bold;
+}
+.italic-article{
+    font-style: italic;
+}
 
 .profile-image img{
-    width: 500px;
-    height: 400px;
+    width: 31.25rem;
+    height: 28.125rem;
     border-radius: 50%;
     border: 15px solid var(--border-gray-color);
-
+    margin-left: 100px;
+    margin-right: 10px;
 }
