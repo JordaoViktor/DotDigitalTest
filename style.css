@@ -253,3 +253,8 @@ ul,li{
     margin-left: 100px;
     margin-right: 10px;
 }
+
+.accordion{
+    width:100vw;
+    height:100vh
+}
