@@ -290,8 +290,6 @@ body{
 .accordion-label:hover{
     background: rgba(52,52,52,0.7);
 }
-
-
 .accordion-label::after{
     content:'';
     position:absolute;
@@ -353,9 +351,7 @@ body{
     background-color: var(--white-color);
     color:var(--primmary-color);
 }
-.accordion-input:checked ~ .accordion-label:first-child:hover{
-   
-}
+
 .border{
     border-radius: 20px;
 }
@@ -386,4 +382,15 @@ body{
     top: 0;
     bottom: 0;
     margin-left: auto;
+}
+
+.footer{
+    width: 100vw;
+    height: 100px;
+    background-color: var(--border-gray-color);
+    color:var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
 }
