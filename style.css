@@ -11,6 +11,9 @@
 ul,li{
     list-style: none;
 }
+input{
+    border:none
+}
 body{
     overflow-x: hidden;
 }
@@ -22,6 +25,7 @@ body{
     --strong-green-color:#2d3b09;
     --weak-green-color:#546130;
     --white-color:#ffffff;
+    --black-color:#000000;
 }
 .carousel{
     position: relative;
@@ -351,7 +355,9 @@ body{
     background-color: var(--white-color);
     color:var(--primmary-color);
 }
-
+.accordion-input:checked ~ .accordion-label:first-child:hover{
+   
+}
 .border{
     border-radius: 20px;
 }
@@ -368,22 +374,51 @@ body{
     width:100vw;
     height: 700px;
     background-color: var(--primmary-color);
-}
-.email-ground{
-    width:100%;
-    height: 100%;
-    background-color: var(--primmary-color);
-}
-.geometry{
-    width: 0;
-    height: 0;
-    border-bottom: 700px solid var(--background-gray-color);
-    border-left: 1300px solid transparent;
+    background-image: url('./assets/email-background.jpg');
+    background-size: 100% 600px;
+    background-repeat: round;
     top: 0;
-    bottom: 0;
-    margin-left: auto;
+    left: 0;
+    position: relative;
+}
+.email-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email-name{
+    width: 80%;
+    background-color: var(--secondary-color);
+    align-items: center;
+    padding:20px 0;
+    border-radius: 10px;
+    margin:20px 0;
+}
+.email-name span{
+    color:var(--black-color);
+    font-weight: bold;
+    padding-left: 20px;
+}
+.email-name input{
+    background: transparent;
+    cursor:text;
+    width: 90%;
+    margin-left: 10px;
+    font-size: 12pt;
+    outline: none;
+    color:var(--background-gray-color)
+}
+.email-contact{
+    
 }
 
+.email-container-flex{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
 .footer{
     width: 100vw;
     height: 100px;
