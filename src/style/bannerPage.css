@@ -1,7 +1,12 @@
+.mobile-banner{
+    display: none;
+}
+
 .carousel{
     position: relative;
     height:100vh;
     width: 100vw;
+    background-color: var(--primmary-color);
 }
 .carousel-image{
     width: 100vw;
@@ -93,4 +98,36 @@
 .container svg{
     width: 55px;
     height: 80px;
+}
+
+@media only screen and (max-width:1180px){
+    .mobile-banner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100vw;
+        height: 20vh;
+        background-color: var(--background-gray-color);
+        color:var(--white-color)
+    }
+    .mobile-banner h1 {
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    .container h1, .container p {
+        display: none;
+    }
+    .carousel{
+        height: 70vh;
+    }
+    .carousel-image{
+        background-size: 100% 70%;
+    }
+    .carousel-nav{
+        width: 100%;
+        padding: 10px 0;
+        margin: -70px 0;
+    }
 }
