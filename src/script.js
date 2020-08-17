@@ -34,12 +34,18 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 }
 
 const moveToSlideGrid = (trackGrid, currentSlide, targetSlide) => {
+    const trueOrFalse = parseInt(targetSlide.style.left) <= slideWidthGrid * 2 + !trackWidth
     targetSlide.classList.add('current-slide-grid');
+    console.log(trueOrFalse) 
     if(trackWidth >= mediaQuery){
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left) * threeCards}px)`;  
     }
     if(trackWidth < mediaQuery){
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left)}px)`
+    }
+    if(trueOrFalse === false){
+        trackGrid.style.transform = `translateX(-${parseInt(trackWidth * 1.979) }px)`
+        return false
     }
     currentSlide.classList.remove('current-slide-grid')
 }
@@ -53,6 +59,9 @@ prevButton.addEventListener('click', event =>{
     const currentSlide = trackGrid.querySelector('.current-slide-grid');
     const prevSlide = currentSlide.previousElementSibling 
     moveToSlideGrid(trackGrid, currentSlide, prevSlide)
+    if(moveToSlideGrid(trackGrid, currentSlide, prevSlide) === null){
+        return false
+    }
 })
 
 nextButton.addEventListener('click', event => {

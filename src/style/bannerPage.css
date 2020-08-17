@@ -134,4 +134,7 @@
         padding: 10px 0;
         margin: -70px 0;
     }
+    .carousel-slide-grid{
+        width: 100%;
+    }
 }
