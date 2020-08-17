@@ -119,13 +119,33 @@
    transition: ease-in .2s;
 }
 
-.footer{
-    width: 100vw;
-    height: 100px;
-    background-color: var(--border-gray-color);
-    color:var(--white-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
+
+@media only screen and (max-width:1180px){
+    .email-page{
+        height: 700px;
+    }
+    .email-container-flex{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .email-name{
+        margin-top: 80px;
+    }
+    .email-name input{
+        width: 70%;
+    }
+    .email-contact{
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .email-contact input{
+        width: 70%;
+    }
+    .email-phone input{
+        width: 60%;
+    }
+    .email-phone{
+        width: 100%;
+    }
+    
 }
