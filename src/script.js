@@ -15,6 +15,7 @@ const trackWidth = trackGrid.offsetWidth;
 
 const mediaQuery =  1180
 const threeCards = 3
+const sizeOfmissWidth = 1.979
 
 const setSlidePosition = (slide, index)=> {
     slide.style.left = slideWidth * index + 'px';
@@ -44,7 +45,7 @@ const moveToSlideGrid = (trackGrid, currentSlide, targetSlide) => {
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left)}px)`
     }
     if(trueOrFalse === false){
-        trackGrid.style.transform = `translateX(-${parseInt(trackWidth * 1.979) }px)`
+        trackGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth) }px)`
         return false
     }
     currentSlide.classList.remove('current-slide-grid')
