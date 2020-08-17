@@ -37,3 +37,38 @@
     margin-left: 100px;
     margin-right: 10px;
 }
+@media only screen and (max-width:1180px){
+    .profile{
+        height: 1100px;        
+    }
+    .profile-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .profile-image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .profile-image img{
+        width: 350px;
+        height:350px ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+    .profile-content .title{
+        font-size: 25pt;
+    }
+    .profile-content{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .profile-content article{
+        text-align: center;
+    }
+}

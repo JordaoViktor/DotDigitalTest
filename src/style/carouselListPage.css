@@ -4,6 +4,9 @@
     height: 500px;
     position: relative;
 }
+.flex-carousel{
+    display: none;
+}
 .grid-container{
     display: grid;
     grid-template-columns: 1.5fr 1fr 1.5fr;
@@ -40,7 +43,6 @@
     height: 40px;
     width: 40px;
     position: absolute;
-    z-index: 2;
     fill:var(--white-color)
 }
 .carousel-button-left{
@@ -48,7 +50,6 @@
     height:40px;
     width: 40px;
     position: absolute;
-    z-index: 2;
     fill:var(--white-color)
 }
 .left-side{
@@ -96,4 +97,44 @@
 .card article{
     width: 300px;
     text-align: center;
+}
+
+.carousel-flex .flex-item{
+    display: none;
+}
+.ishidden{
+    width: 0%;
+    display: none;
+    height: 0%;
+    z-index: -3;
+    position: relative;
+    visibility: hidden;
+
+}
+
+
+@media only screen and (max-width:1180px){
+    .grid-container, .left-side, .middle, .right-side{
+        display: none;
+    }
+    .flex-carousel{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+    }
+    
+    .carousel-button{        
+        top: 0;
+        transform: translateY(1050%);
+    }
+    .carousel-button-right{
+        right: 25%;   
+    }
+    .carousel-button-left{
+        left: 25%;
+    } 
+
 }

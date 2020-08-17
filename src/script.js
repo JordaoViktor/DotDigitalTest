@@ -11,6 +11,8 @@ const slidesGrid = Array.from(trackGrid.children);
 const slideWidthGrid = slidesGrid[0].getBoundingClientRect().width;
 const slideWidth  = slides[0].getBoundingClientRect().width;
 
+console.log(slidesGrid.length)
+console.log()
 
 const setSlidePosition = (slide, index)=> {
     slide.style.left = slideWidth * index + 'px';
@@ -37,10 +39,8 @@ const upDateDots = (currentDot, targetDot) => {
     currentDot.classList.remove('current-slide');
     targetDot.classList.add('current-slide');
 }
-console.log(prevButton)
 
 prevButton.addEventListener('click', event =>{
-    console.log(event.target)
     const currentSlide = trackGrid.querySelector('.current-slide-grid');
     const prevSlide = currentSlide.previousElementSibling 
     moveToSlideGrid(trackGrid, currentSlide, prevSlide)
