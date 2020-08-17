@@ -4,26 +4,12 @@
     height: 500px;
     position: relative;
 }
-.flex-carousel{
-    display: none;
-}
-.grid-container{
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1.5fr;
-    grid-template-rows: 1fr;
-    grid-gap:45px;
-    grid-template-areas: "left-side middle right-side";
-    position:absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-}
+
 .carousel-track-grid{
     position: relative;
     height: 100%;
     width: 100%;
-    transition:transform 500ms ease-in;
+    transition:transform 1s ease-in;
 }
 .carousel-track-container{
     display: flex;
@@ -57,34 +43,10 @@
     position: absolute;
     fill:var(--white-color)
 }
-.left-side{
-    grid-area: left-side;
-}
-.middle{
-    grid-area: middle; 
-}
-.right-side{
-    grid-area: right-side; 
-}
 .card{
     height: 100%;
     color:var(--white-color);
     margin-top: 50px;
-}
-.card-left-side{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-.card-middle-side{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.card-right-side{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
 }
 .card img{
     width:300px;
@@ -104,13 +66,7 @@
     text-align: center;
 }
 
-
-
-
 @media only screen and (max-width:1180px){
-    .grid-container, .left-side, .middle, .right-side{
-        display: none;
-    }
     .flex-carousel{
         width: 100%;
         height: 100%;
@@ -119,7 +75,6 @@
         justify-content: center;
         position: absolute;
     }
-    
     .carousel-button{        
         top: 0;
         transform: translateY(1050%);
