@@ -105,3 +105,17 @@
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px ;
 }
+@media only screen and (max-width:1180px){
+    .accordion-container{
+        flex-direction: column;
+    }
+    .accordion-content img{
+        margin-bottom: 20px;
+    }
+    .accordion-label::after{
+        right: 0;
+    }
+    .accordion-input:checked ~ .accordion-label::after{
+        right: 0;
+    }
+}
