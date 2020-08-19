@@ -37,16 +37,18 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 const moveToSlideGrid = (trackGrid, currentSlide, targetSlide) => {
     const trueOrFalse = parseInt(targetSlide.style.left) <= slideWidthGrid * 2 + !trackWidth
     targetSlide.classList.add('current-slide-grid');
-    if(trackWidth >= mediaQuery){
-        trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left) * threeCards}px)`;  
-    }
     if(trackWidth < mediaQuery){
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left)}px)`
     }
-    if(trueOrFalse === false){
-        trackGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth) }px)`
-        return false
+    if(trackWidth >= mediaQuery){
+        trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left) * threeCards}px)`;
+        if(trueOrFalse === false){
+            trackGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth) }px)`
+            return false
+        }  
     }
+    
+    
     currentSlide.classList.remove('current-slide-grid')
 }
 
