@@ -46,7 +46,9 @@
 .card{
     height: 100%;
     color:var(--white-color);
-    margin-top: 50px;
+    
+    width: 33%;
+    
 }
 .card img{
     width:300px;
@@ -80,10 +82,13 @@
         transform: translateY(1050%);
     }
     .carousel-button-right{
-        right: 25%;   
+        right: 30%;   
     }
     .carousel-button-left{
-        left: 25%;
+        left: 30%;
     } 
+    .card{
+        margin-bottom: 80px;
+    }
 
 }
