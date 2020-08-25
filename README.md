@@ -11,11 +11,11 @@ Estou utilizando para esse projeto
     <li>Gulp</li>
 </ul>
 
-### Para fazer o build do projeto utilizar o comando
+### Como rodar o projeto
 
 **npm run build**
 
-### Caso queira acessar o projeto utilizar o live-server
+**Caso queira acessar o projeto utilizar o live-server**
 
 ## Imagem do projeto
 

@@ -1,17 +1,15 @@
 const track = document.querySelector('.carousel-track');
 const trackGrid = document.querySelector('.carousel-track-grid');
-const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel-button-right');
 const prevButton = document.querySelector('.carousel-button-left');
 const dotsNav = document.querySelector('.carousel-nav');
-const dots = Array.from(dotsNav.children);
 
+const slides = Array.from(track.children);
+const dots = Array.from(dotsNav.children);
 const slidesGrid = Array.from(trackGrid.children);
 
 const slideWidthGrid = slidesGrid[0].getBoundingClientRect().width;
 const slideWidth = slides[0].getBoundingClientRect().width;
-
-
 
 const mediaQuery = 1180;
 const threeCards = 3;
