@@ -19,31 +19,38 @@ const sizeOfmissWidth = 1.979;
 const radialParse = 10;
 
 const setSlidePosition = (slide, index) => {
-  slide.style.left = `${slideWidth * index}px`;
+  const positionSlide = slide;
+  positionSlide.style.left = `${slideWidth * index}px`;
 };
 const setSlidePositionGrid = (slide, index) => {
-  slide.style.left = `${slideWidthGrid * index}px`;
+  const positionSlideGrid = slide;
+  positionSlideGrid.style.left = `${slideWidthGrid * index}px`;
 };
 
 slides.forEach(setSlidePosition);
 slidesGrid.forEach(setSlidePositionGrid);
 
-const moveToSlide = (track, currentSlide, targetSlide) => {
-  targetSlide.classList.add('current-slide');
-  track.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
-  currentSlide.classList.remove('current-slide');
+const moveToSlide = (trackSlide, currentSlide, targetSlide) => {
+  const moveTrack = trackSlide;
+  const moveCurrentSlide = currentSlide;
+  const moveTargetslide = targetSlide;
+
+  moveTargetslide.classList.add('current-slide');
+  moveTrack.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
+  moveCurrentSlide.classList.remove('current-slide');
 };
 
-const moveToSlideGrid = (trackGrid, currentSlide, targetSlide) => {
+const moveToSlideGrid = (trackSlide, currentSlide, targetSlide) => {
+  const trackSlideGrid = trackSlide;
   const shouldReturnFalse = parseInt(targetSlide.style.left, radialParse) <= slideWidthGrid * 2 + !trackWidth;
   targetSlide.classList.add('current-slide-grid');
   if (trackWidth < mediaQuery) {
-    trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
+    trackSlideGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
   }
   if (trackWidth >= mediaQuery) {
-    trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse) * threeCards}px)`;
+    trackSlideGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse) * threeCards}px)`;
     if (!shouldReturnFalse) {
-      trackGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth, radialParse)}px)`;
+      trackSlideGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth, radialParse)}px)`;
       return false;
     }
   }
