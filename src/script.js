@@ -11,7 +11,7 @@ const slidesGrid = Array.from(trackGrid.children);
 const slideWidthGrid = slidesGrid[0].getBoundingClientRect().width;
 const slideWidth = slides[0].getBoundingClientRect().width;
 
-const trackWidth = trackGrid.offsetWidth;
+
 
 const mediaQuery = 1180;
 const threeCards = 3;
@@ -36,19 +36,24 @@ const moveToSlide = (trackSlide, currentSlide, targetSlide) => {
   const moveTargetslide = targetSlide;
 
   moveTargetslide.classList.add('current-slide');
-  moveTrack.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
+  moveTrack.style.transform = `translateX(-${parseInt(moveTargetslide.style.left, radialParse)}px)`;
   moveCurrentSlide.classList.remove('current-slide');
 };
 
 const moveToSlideGrid = (trackSlide, currentSlide, targetSlide) => {
+  const trackWidth = trackGrid.offsetWidth;
   const trackSlideGrid = trackSlide;
-  const shouldReturnFalse = parseInt(targetSlide.style.left, radialParse) <= slideWidthGrid * 2 + !trackWidth;
-  targetSlide.classList.add('current-slide-grid');
+  const targetSlideGrid = targetSlide;
+  const translateTargetSlide = parseInt(targetSlideGrid.style.left, radialParse);
+  const shouldReturnFalse = translateTargetSlide <= slideWidthGrid * 2 + !trackWidth;
+
+  targetSlideGrid.classList.add('current-slide-grid');
+
   if (trackWidth < mediaQuery) {
-    trackSlideGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse)}px)`;
+    trackSlideGrid.style.transform = `translateX(-${translateTargetSlide}px)`;
   }
   if (trackWidth >= mediaQuery) {
-    trackSlideGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left, radialParse) * threeCards}px)`;
+    trackSlideGrid.style.transform = `translateX(-${translateTargetSlide * threeCards}px)`;
     if (!shouldReturnFalse) {
       trackSlideGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth, radialParse)}px)`;
       return false;
