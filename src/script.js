@@ -21,8 +21,7 @@ const setSlidePosition = (slide, index)=> {
     slide.style.left = slideWidth * index + 'px';
 }
 const setSlidePositionGrid = (slide, index ) => {
-    slide.style.left =  slideWidthGrid  * index + 'px';
-    slide.style.left = slideWidthGrid * index + 'px';
+    slide.style.left =  `${slideWidthGrid  * index}px`;
 }
 
 slides.forEach(setSlidePosition);
@@ -35,14 +34,14 @@ const moveToSlide = (track, currentSlide, targetSlide) => {
 }
 
 const moveToSlideGrid = (trackGrid, currentSlide, targetSlide) => {
-    const trueOrFalse = parseInt(targetSlide.style.left) <= slideWidthGrid * 2 + !trackWidth
+    const shouldReturnFalse = parseInt(targetSlide.style.left) <= slideWidthGrid * 2 + !trackWidth
     targetSlide.classList.add('current-slide-grid');
     if(trackWidth < mediaQuery){
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left)}px)`
     }
     if(trackWidth >= mediaQuery){
         trackGrid.style.transform = `translateX(-${parseInt(targetSlide.style.left) * threeCards}px)`;
-        if(trueOrFalse === false){
+        if(!shouldReturnFalse){
             trackGrid.style.transform = `translateX(-${parseInt(trackWidth * sizeOfmissWidth) }px)`
             return false
         }  
