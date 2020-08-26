@@ -9,6 +9,7 @@ Estou utilizando para esse projeto
     <li>CSS3</li>
     <li>HTML 5</li>
     <li>Gulp</li>
+    <li>Eslint</li>
 </ul>
 
 ### Como rodar o projeto
